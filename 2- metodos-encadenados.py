@@ -23,7 +23,7 @@ class User:		# aqui está lo que tenemos hasta ahora
     def transfer_money(self, other_user, amount):
         self.account_balance -= amount 
         other_user.make_deposit(amount)
-
+        return self
 
 guido = User("Guido van Rossum", "guido@python.com")
 guido.make_deposit(350).make_deposit(300).make_deposit(500).make_withdrawal(530)
