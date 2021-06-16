@@ -23,17 +23,23 @@ class User:		# aqui está lo que tenemos hasta ahora
 
 guido = User("Guido van Rossum", "guido@python.com")
 guido.make_deposit(350)
-guido.make_withdrawal(50)
+guido.make_deposit(300)
+guido.make_deposit(500)
+guido.make_withdrawal(530)
 #print(guido)
 
 monty = User("Monty Python", "monty@python.com")
 monty.make_deposit(650)
+monty.make_deposit(1000)
 monty.make_withdrawal(400)
+monty.make_withdrawal(100)
 #print(monty)
 
 ely = User("Elizabeth Hernandez", "elizabeth.hernandezc@gmail.com")
-ely.make_deposit(800)
-ely.make_withdrawal(200)
+ely.make_deposit(3500)
+ely.make_withdrawal(500)
+ely.make_withdrawal(1000)
+ely.make_withdrawal(2000)
 #print(ely)
 # print(guido.name)	# salida: Guido van Rossum
 # print(monty.name)	# salida: Monty Python
