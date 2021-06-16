@@ -44,7 +44,7 @@ ely = User("Elizabeth Hernandez", "elizabeth.hernandezc@gmail.com")
 ely.make_deposit(3500)
 ely.make_withdrawal(500)
 ely.make_withdrawal(1000)
-ely.make_withdrawal(2000)
+ely.make_withdrawal(1000)
 ely.transfer_money(guido, 500)
 #print(ely)
 # print(guido.name)	# salida: Guido van Rossum
