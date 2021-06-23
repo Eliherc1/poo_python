@@ -14,6 +14,8 @@ class User:		# aqui está lo que tenemos hasta ahora
         return self
 
     def make_withdrawal(self, amount):
+        #self.account_balance < amount:
+        #print(f"No tiene Saldo suficiente, el saldo actual es: {self.account_balance} Falta: {amount - self.account_balance}")
         self.account_balance -= amount
         return self
 
@@ -21,7 +23,7 @@ class User:		# aqui está lo que tenemos hasta ahora
         return f"Usuario: {self.name}, Saldo: {self.account_balance}"
 
     def transfer_money(self, other_user, amount):
-        self.account_balance -= amount 
+        self.account_balance -= amount
         other_user.make_deposit(amount)
 
 
@@ -31,14 +33,14 @@ guido.make_deposit(300)
 guido.make_deposit(500)
 guido.make_withdrawal(530)
 
-#print(guido)
+# print(guido)
 
 monty = User("Monty Python", "monty@python.com")
 monty.make_deposit(650)
 monty.make_deposit(1000)
 monty.make_withdrawal(400)
 monty.make_withdrawal(100)
-#print(monty)
+# print(monty)
 
 ely = User("Elizabeth Hernandez", "elizabeth.hernandezc@gmail.com")
 ely.make_deposit(3500)
@@ -46,7 +48,7 @@ ely.make_withdrawal(500)
 ely.make_withdrawal(1000)
 ely.make_withdrawal(1000)
 ely.transfer_money(guido, 500)
-#print(ely)
+# print(ely)
 # print(guido.name)	# salida: Guido van Rossum
 # print(monty.name)	# salida: Monty Python
 
