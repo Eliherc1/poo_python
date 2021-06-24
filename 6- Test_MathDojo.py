@@ -1,4 +1,4 @@
-import statistics
+import unittest
 
 class MathDojo:
     def __init__(self):
@@ -17,16 +17,21 @@ class MathDojo:
             #print(v)
             self.result = self.result - n
         return self
-    
 md = MathDojo()
-# para probar:
-#x = md.add(200).add(2, 5, 10).add(33,12,7).result
-#x = md.subtract(9).subtract(2, 50, 1).subtract(3,1,15).result
+#md2 = MathDojo()
 
-x = md.add(2).add(2,5,1).subtract(3,2).result
-print("El resultado es",x)  # debe imprimir 5
-# corre cada uno de los metodos algunos mas veces y valida el resultado!
+class mathDojoTest(unittest.TestCase):
+    def testUno(self):
+        #self.assertEqual(md.add(2,5,1).result, 8)
+        self.assertTrue(md.add(2,5,1).result==8)
+    def testDos(self):
+        self.assertEqual(md.subtract(3,2).result, -5)
 
-d= statistics.pstdev([1.5, 2.5, 2.5, 2.75, 3.25, 4.75])
-print("La Desviacion Estandar es:",d)
+    def setUp(self):
+        md.result=0
+        print(md.result, "Desde SETUP")
 
+    def tearDown(self):
+        print("Prueba")
+if __name__ == '__main__':
+    unittest.main()
